@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub de Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <span>Início</span>
+    <span>Sobre</span>
+    <span>Projetos</span>
+    <span>Contato</span>
+  </header>
+  <div class="intro">
+    <p>Este site reúne os principais projetos desenvolvidos por estudantes do tecnólogo na área de desenvolvimento web, destacando criatividade, inovação e aplicação prática dos conhecimentos adquiridos ao longo do curso.</p>
+  </div>
+  <main>
+    <div class="projects-header">
+      <h2>Projetos</h2>
+      <div>
+        <label>Ordenar por:</label>
+        <select onchange="ordenarProjetos(this.value)">
+          <option value="nome">Nome</option>
+          <option value="autor">Autor</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="projetos-grid">
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" data-nome="Projeto3" data-autor="AutorC">
+        <img src="resources/aaaa.jpg" alt="Projeto3" class="card-img">
+        <div class="card-text">
+          <h3>Projeto3</h3>
+          <p>Descrição</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/User01', 'https://instagram.com/user')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span>👥 Nome User</span>
+            <a href="https://github.com/User01" target="_blank">🐙 User01</a>
+            <a href="https://instagram.com/user" target="_blank">📷 @user</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <div class="close-btn" onclick="closeModal()">&times;</div>
+      <div style="height:180px;background:#bbb;margin-bottom:1rem;"></div>
+      <div class="info">
+        <div class="text">
+          <h3 id="modal-title">Projeto</h3>
+          <p id="modal-desc">Descrição do projeto</p>
+        </div>
+        <div class="author">
+          <img src="#" alt="Autor">
+          <strong id="modal-autor">Autor</strong>
+          <a id="modal-github" href="#" target="_blank">GitHub</a>
+          <a id="modal-instagram" href="#" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <strong>Nome do Site</strong><br>
+      &copy; Todos os direitos reservados
+    </div>
+    <div>
+      <strong>Links</strong><br>
+      Página 1<br>
+      Página 2<br>
+      Página 3<br>
+      Página 4
+    </div>
+    <div>
+      <strong>Colaboradores</strong><br>
+      Nome aluno<br>
+      Nome aluno<br>
+      Nome aluno
+    </div>
+    <div>
+      <strong>Informações</strong><br>
+      E-mail<br>
+      Localização<br>
+      Curso<br>
+      Desenvolvimento
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/c8de44c573.js" crossorigin="anonymous"></script>
+  
+</body>
+</html>
