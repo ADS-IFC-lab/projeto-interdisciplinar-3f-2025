@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hub de Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <span>Início</span>
+    <span>Sobre</span>
+    <span>Projetos</span>
+    <span>Contato</span>
+  </header>
+  <div class="intro">
+    <img src="resources/logoIC.png" alt="Logo IC">
+    <p>Este site reúne os principais projetos desenvolvidos por estudantes do tecnólogo na área de desenvolvimento web, destacando criatividade, inovação e aplicação prática dos conhecimentos adquiridos ao longo do curso.</p>
+  </div>
+  <main>
+    <div class="projects-header">
+      <h2>Projetos</h2>
+      <div>
+        <label>Ordenar por:</label>
+        <select onchange="ordenarProjetos(this.value)">
+          <option value="nome">Nome</option>
+          <option value="autor">Autor</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="projetos-grid">
+      <!--copiar trecho de cartão para seu respectivo projeto-->
+      <div class="card" data-nome="Projeto1" data-autor="Joao_Pedro"
+      data-projimg="https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000000/fom-website/2025/Ferrari/Ferrari%20SF-25%20launch%20renders/F677_still_02_v11_169.webp"                    
+      data-devimg="https://avatars.githubusercontent.com/u/78744308?v=4"                  
+      data-desc="Olá! Eu sou o João Pedro, desenvolvedor JAVA apaixonado
+      por tecnologia e fã de Fórmula 1. Criei o F1 Dashboard para reunir em
+      um só lugar as estatísticas mais completas da temporada. Espero que você goste do app!"
+      data-link="https://jpdevr.github.io/HomePageF1/">
+        <img src="https://media.formula1.com/image/upload/t_16by9Centre/c_lfill,w_3392/q_auto/v1740000000/fom-website/2025/Ferrari/Ferrari%20SF-25%20launch%20renders/F677_still_02_v11_169.webp" alt="Projeto2" class="card-img">
+        <div class="card-text">
+          <h3>F1 Dashboard</h3>
+          <p>Dashboard de dados e informações da f1</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/jpdevr', 'https://linkedin.com/in/xxxx')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span><i class="fa-solid fa-user"></i> João Pedro</span>
+            <a href="https://github.com/jpdevr" target="_blank"><i class="fa-brands fa-github"></i> jpdevr</a>
+            <a href="https://linkedin.com/in/jpdevr324" target="_blank"><i class="fa-brands fa-linkedin"></i> João Pedro</a>
+          </div>
+        </div>
+      </div>
+<!-- altere os dados para não ter conflito de dados, -->
+      <div class="card" data-nome="Projeto2" data-autor="AutorasC">
+        <img src="resources/aaaa.jpg" alt="Projeto2" class="card-img">
+        <div class="card-text">
+          <h3>nome projeto</h3>
+          <p>mini desc.</p>
+        </div>
+        <div class="user-icon" onmouseover="showPopup(this, 'Nome User', 'https://github.com/xxxx', 'https://linkedin.com/in/xxxxx')" onmouseout="hidePopup(this)">👤
+          <div class="user-popup">
+            <span><i class="fa-solid fa-user"></i> xxxx</span>
+            <a href="https://github.com/xxxx" target="_blank"><i class="fa-brands fa-github"></i> xxxr</a>
+            <a href="https://linkedin.com/in/xxx" target="_blank"><i class="fa-brands fa-linkedin"></i> xxxxx</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <div class="modal-bg" id="modal-bg">
+    <div class="modal">
+      <div class="close-btn" onclick="closeModal()">&times;</div>
+      <div style="height:180px;background:#bbb;margin-bottom:1rem;"></div>
+      <div class="info">
+        <div class="text">
+          <h3 id="modal-title">Projeto</h3>
+          <p id="modal-desc">Descrição do projeto</p>
+        </div>
+        <div class="author">
+          <img src="#" alt="Autor">
+          <strong id="modal-autor">Autor</strong>
+          <a id="modal-github" href="#" target="_blank">GitHub</a>
+          <a id="modal-instagram" href="#" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <strong>Nome do Site</strong><br>
+      &copy; Todos os direitos reservados
+    </div>
+    <div>
+      <strong>Links</strong><br>
+      Página 1<br>
+      Página 2<br>
+      Página 3<br>
+      Página 4
+    </div>
+    <div>
+      <strong>Colaboradores</strong><br>
+      Nome aluno<br>
+      Nome aluno<br>
+      Nome aluno
+    </div>
+    <div>
+      <strong>Informações</strong><br>
+      E-mail<br>
+      Localização<br>
+      Curso<br>
+      Desenvolvimento
+    </div>
+  </footer>
+
+  <div id="project-popup" class="popup-hidden">
+    <div class="popup-content">
+      <button class="popup-close" onclick="closePopup()">✕</button>
+      <div class="popup-header">
+        <h2 id="popup-title"></h2>
+        <span id="popup-author" style="margin-left: 8px;">● <span id="author-name"></span></span>
+      </div>
+      <div class="popup-body" style="display: flex; gap: 20px; margin-top: 1rem;">
+        <div class="popup-left" style="flex: 1;">
+          <img id="popup-project-img" src="" alt="Foto do projeto" style="width: 100%; border-radius: 8px; object-fit: cover; max-height: 200px;">
+          <p id="popup-description" style="margin-top: 1rem;"></p>
+          <a id="popup-project-link" href="#" target="_blank" style="display: inline-block; margin-top: 0.5rem; color: #007bff; text-decoration: underline;">Ver página do projeto</a>
+        </div>
+        <div class="popup-right" style="flex: 1;">
+          <div class="devs-photos" style="display: flex; gap: 12px; margin-bottom: 1rem;">
+            
+            <img id="popup-dev-photo" src="" alt="Foto do desenvolvedor" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+          </div>
+          <div class="devs-links" style="display: flex; flex-direction: column; gap: 6px;">
+            <a id="author-github" href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a id="author-linkedin" href="#" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/script.js"></script>
+  <script src="https://kit.fontawesome.com/c8de44c573.js" crossorigin="anonymous"></script>
+  
+</body>
+</html>
