@@ -1,6 +1,6 @@
 let currentKey = 'title';
     const exemplos = [
-      { title: 'Projeto A', author: 'Autor01', date: '2025-07-01', instagram: 'AutorA', github: 'UserA', linkedin: 'UserALink', desc: 'Descrição do Projeto A.', image: 'https://picsum.photos/400/160?random=1', profileImage: 'https://i.pravatar.cc/36?img=1' },
+      { title: 'F1 Dashboard', author: 'João Pedro Gonçalves', date: '2025-07-01', instagram: 'joao_pedro.psd', github: 'jpdevr', linkedin: 'jpdevr324', desc: 'Projeto sobre informações da F1', image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj90mQiRZ5jPg9jNGz969LtkJ_cmzyL55ZpAgrXS_tQh2RpVsdcE7n_Wmfh4TgudIOXWDurraa4oDNli8Wg9Cmz3fD-s-3X34N_R-vj01b5EB9u4NWVPF_BKelT2ZsuMnGvFfcgnLQTSreHO3Jd55s7ONhDZS3o8N5cVDevapksIh9hlRNxBBlmT8GEmUFa/s600/Ferrari-SF-25%20%2810%29.jpg', profileImage: 'https://media.licdn.com/dms/image/v2/D4D03AQG6JE0-tqoAYw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1711491641690?e=1757548800&v=beta&t=MP3B75BjfcH3HdaYD4WhcK4nPE4ElEkM6F9b0gC8gjk' },
       { title: 'Projeto B', author: 'Autor02', date: '2025-06-15', instagram: 'AutorB', github: 'UserB', linkedin: 'UserBLink', desc: 'Descrição do Projeto B.', image: 'https://picsum.photos/400/160?random=2', profileImage: 'https://i.pravatar.cc/36?img=2' },
       { title: 'Projeto C', author: 'Autor03', date: '2025-05-20', instagram: 'AutorC', github: 'UserC', linkedin: 'UserCLink', desc: 'Descrição do Projeto C.', image: 'https://picsum.photos/400/160?random=3', profileImage: 'https://i.pravatar.cc/36?img=3' },
       { title: 'Projeto D', author: 'Autor04', date: '2025-04-10', instagram: 'AutorD', github: 'UserD', linkedin: 'UserDLink', desc: 'Descrição do Projeto D.', image: 'https://picsum.photos/400/160?random=4', profileImage: 'https://i.pravatar.cc/36?img=4' },
@@ -26,7 +26,7 @@ let currentKey = 'title';
                 <div class="popup-header">${p.author}</div>
                 <div class="popup-item"><i class="fab fa-github"></i><a href="https://github.com/${p.github}" target="_blank">${p.github}</a></div>
                 <div class="popup-item"><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/${p.linkedin}" target="_blank">${p.author}</a></div>
-                <div class="popup-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/${p.instagram}" target="_blank">@${p.instagram}</a></div>
+                <div class="popup-item"><i class="fab fa-instagram"></i><a href="https://instagram.com/${p.instagram}" target="_blank">${p.instagram}</a></div>
               </div>
             </div>
           </div>`;
@@ -38,7 +38,7 @@ let currentKey = 'title';
       document.getElementById('modalTitle').textContent = p.title;
       document.getElementById('modalDescription').textContent = p.desc;
       const gh = document.getElementById('ghLink'); gh.href = `https://github.com/${p.github}`; gh.innerHTML = `<i class="fab fa-github"></i>${p.github}`;
-      const ig = document.getElementById('igLink'); ig.href = `https://instagram.com/${p.instagram}`; ig.innerHTML = `<i class="fab fa-instagram"></i>@${p.instagram}`;
+      const ig = document.getElementById('igLink'); ig.href = `https://instagram.com/${p.instagram}`; ig.innerHTML = `<i class="fab fa-instagram"></i>${p.instagram}`;
       document.getElementById('modalBackdrop').classList.add('active');
     }
     function closeModal(e) { e.stopPropagation(); document.getElementById('modalBackdrop').classList.remove('active'); }

@@ -5,42 +5,57 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: #f5f5f5;
   color: #333;
   overflow-x: hidden;
 }
 
-header {
-  background: #ccc;
+.nav-index{
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
+
+.top-bar {
+  background: #0A401D;
+  padding: .5rem;
 }
 
 .nav-bar {
+  background: #B2D98B;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem;
+  padding: .60rem;
 }
 
 .nav-bar span {
   cursor: pointer;
-  color: #333;
+  color: #f2f2f2;
   font-size: 1rem;
 }
 
+.nav-bar span:hover{
+  color: #0A401D;
+  transform:scale(1.1);
+}
+
 .banner {
-  background: #e0e0e0;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  width: 100vw;
-  height: 70vh;
-  padding: 2rem;
-  margin: 0;
+background: #e0e0e0;
+display: flex;
+align-items: center;
+gap: 2rem; padding: 2rem;
+border-radius: 8px;
+margin: 2rem 1rem; 
+margin-top: 90px;
 }
 
 .banner-image {
-  background: #ccc;
+  background-image: url("https://ifc.edu.br/farol/assets/imagens/logo-ifc-vertical.png");
+  background-color: #F2F2F2;
   width: 120px;
   height: 120px;
   display: flex;
@@ -48,7 +63,7 @@ header {
   justify-content: center;
   color: #aaa;
   font-size: 3rem;
-  border-radius: 4px;
+  border-radius: 6px;
   flex-shrink: 0;
 }
 
@@ -185,7 +200,6 @@ main {
   color: #666;
 }
 
-/* Perfil popup only with CSS hover */
 .profile {
   position: absolute;
   bottom: 8px;
@@ -339,17 +353,39 @@ footer {
   padding: 2rem 1rem;
   display: flex;
   justify-content: space-around;
+  align-items: center; 
   gap: 1rem;
   margin-top: 2rem;
   width: 100vw;
   position: relative;
   left: 50%;
   margin-left: -50vw;
+  text-align: center;
 }
 
 .footer-section {
   flex: 1;
   min-width: 150px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin: 0.3rem 0;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-logo {
