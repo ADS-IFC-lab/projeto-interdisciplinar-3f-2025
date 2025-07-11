@@ -228,6 +228,7 @@ main {
   min-width: 180px;
   font-size: .875rem;
   display: none;
+  width: 200px;
   z-index: 10;
 }
 
@@ -282,7 +283,7 @@ main {
 .modal {
   background: transparent;
   border-radius: 8px;
-  max-width: 500px;
+  max-width: 800px;
   width: 90%;
   overflow: hidden;
   position: relative;
@@ -290,12 +291,17 @@ main {
 
 .modal-image img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
   ;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
+
+ .modal-profile{
+  height: 50px;
+  border-radius: 25%;
+ }
 
 .modal-close {
   position: absolute;
@@ -336,6 +342,7 @@ main {
 
 .footer-left a {
   display: inline-flex;
+  height: 20px;
   align-items: center;
   font-size: .875rem;
   color: #333;
@@ -343,8 +350,9 @@ main {
   margin-right: 1rem;
 }
 
-.footer-right i {
-  font-size: 2rem;
+.footer-left a > .fab {
+  margin-right: 5px;
+  font-size: 1.3rem;
   color: #555;
 }
 
