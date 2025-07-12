@@ -8,7 +8,7 @@ let currentKey = 'title';
 
       { title: 'Arquimedes', author: 'Laura Urba e Andressa Antunes', date: '2025-07-11', instagram: 'ndrssz', github: 'https://github.com/AndressasAntunes', linkedin: 'https://www.linkedin.com/in/andressa-dos-santos-antunes-76208b256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', desc: 'Venda e troca de livros fisicos de fantasia.', image: 'https://i.postimg.cc/gJksh9Yp/Arquimedes-Image.png', profileImage: 'https://avatars.githubusercontent.com/u/205540208?v=4' },
 
-      { title: 'Projeto E', author: 'Autor05', date: '2025-03-05', instagram: 'AutorE', github: 'UserE', linkedin: 'UserELink', desc: 'Descrição do Projeto E.', image: 'https://picsum.photos/400/160?random=5', profileImage: 'https://i.pravatar.cc/36?img=5' }
+      { title: 'Joga Aonde', author: 'Yuri Bargas', date: '2025-03-05', instagram: 'yuri.barg', github: 'YoriBarg', linkedin: 'UserELink', desc: 'Dados sobre Jogos de futebol', image: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/06/botafogo_x_psg_-scaled-aspect-ratio-512-320.jpg', profileImage: 'https://avatars.githubusercontent.com/u/211418723?v=4' }
     ];
     function toggleSortOptions() { document.getElementById('sortOptions').classList.toggle('active'); }
     document.getElementById('sortLabel').addEventListener('click', toggleSortOptions);
