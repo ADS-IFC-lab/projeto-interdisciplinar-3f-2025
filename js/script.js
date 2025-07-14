@@ -10,7 +10,10 @@ let currentKey = 'title';
 
       { title: 'Joga Aonde', author: 'Yuri Bargas', date: '2025-03-05', instagram: 'yuri.barg', github: 'YoriBarg/Interdisciplinar-2', linkedin: 'UserELink', desc: 'Dados sobre Jogos de futebol', image: 'https://lncimg.lance.com.br/cdn-cgi/image/width=950,quality=75,fit=pad,format=webp/uploads/2025/06/botafogo_x_psg_-scaled-aspect-ratio-512-320.jpg', profileImage: 'https://avatars.githubusercontent.com/u/211418723?v=4' },
 
-      { title: 'Controle++', author: 'Samuel Dolberth', date: '2025-07-13', instagram: 'grenouillesalee', github: 'samueldolberth/controlemais', linkedin: 'UserELink', desc: 'Gestão de Estoque', image: 'https://i.postimg.cc/tgRHgX7z/banner-header.png', profileImage: 'https://avatars.githubusercontent.com/u/153951997?v=4&size=64' }
+      { title: 'Controle++', author: 'Samuel Dolberth', date: '2025-07-13', instagram: 'grenouillesalee', github: 'samueldolberth/controlemais', linkedin: 'UserELink', desc: 'Gestão de Estoque', image: 'https://i.postimg.cc/tgRHgX7z/banner-header.png', profileImage: 'https://avatars.githubusercontent.com/u/153951997?v=4&size=64' },
+
+      { title: 'Agência de viagens', author: 'Cesar Augusto Cordeiro', date: '2025-07-13', instagram: 'cesar.cordeiroo', github: 'C-Augusto-1/Projeto-interdisciplinar', linkedin: 'UserELink', desc: 'Extenção para agência de viagens.', image: 'https://images.pexels.com/photos/104826/aircraft-holiday-sun-tourism-104826.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', profileImage: 'https://avatars.githubusercontent.com/u/211418825?v=4&size=64' }
+
     ];
     function toggleSortOptions() { document.getElementById('sortOptions').classList.toggle('active'); }
     document.getElementById('sortLabel').addEventListener('click', toggleSortOptions);
